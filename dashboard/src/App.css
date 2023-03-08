@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Lilita+One&display=swap");
+
+.logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.header {
+  display: flex;
+}
+
+a {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 45px;
+}
+
+h2 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 40px;
+}
+h3 {
+  font-family: "Lilita One", sans-serif;
+  font-size: 20px;
+}
+
+.brand {
+  color: azure;
+  margin-right: 15px;
+}
+
+button {
+  border: none;
+  color: royalblue;
+  background-color: inherit;
+  margin: 5px;
+}
+
+button:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgba(128, 128, 128, 0.39);
+  height: 100vh;
+}
+.inactive {
+  background-color: rgb(255, 255, 255);
+  height: 100vh;
+}
+
+.Container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2px 1px rgba(211, 211, 211, 0.321);
+  margin: 10px 0px;
+  padding: 20px;
+}
+
+.Header {
+  margin: 5px 0px;
+}

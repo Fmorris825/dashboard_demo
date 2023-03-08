@@ -1,0 +1,12 @@
+.projectThumbnail {
+  width: 700px;
+}
+
+.slideImg {
+  width: 100%;
+}
+
+.projectsRow {
+  display: flex;
+  justify-content: space-between;
+}
