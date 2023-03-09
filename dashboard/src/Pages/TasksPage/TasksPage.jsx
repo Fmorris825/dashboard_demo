@@ -11,10 +11,9 @@ export const TaskContext = createContext();
 
 const TasksPage = ({
   tasks,
-  getTasks,
+  setTasks,
   completedList,
   toDoList,
-  tasksCollectionRef,
   filteredToDo,
   projects,
   isLoading,
@@ -54,25 +53,17 @@ const TasksPage = ({
       <div>{/* <ProjectDropdownMenu items={items} onClick={onClick} /> */}</div>
       <div>
         <AddTaskModal
-          tasksCollectionRef={tasksCollectionRef}
-          getTasks={getTasks}
+          tasks={tasks}
+          setTasks={setTasks}
           filteredToDo={filteredToDo}
         />
       </div>
       <div className="taskListContainer">
         <div className="list">
-          <TasksList
-            getTasks={getTasks}
-            list={toDoList}
-            multiComponent={CompleteTaskButton}
-          />
+          <TasksList list={toDoList} multiComponent={CompleteTaskButton} />
         </div>
         <div className="list">
-          <TasksList
-            getTasks={getTasks}
-            list={completedList}
-            multiComponent={UndoTask}
-          />
+          <TasksList list={completedList} multiComponent={UndoTask} />
         </div>
       </div>
 

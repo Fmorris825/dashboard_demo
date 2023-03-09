@@ -250,10 +250,8 @@ function App() {
                             setProjects={setProjects}
                             tasks={tasks}
                             setTasks={setTasks}
-                            // tasksCollectionRef={tasksCollectionRef}
                             isLoading={isLoading}
                             setIsLoading={setIsLoading}
-                            // projectsCollectionRef={projectsCollectionRef}
                             filterCompleted={filterCompleted}
                             filteredToDo={filteredToDo}
                           />
@@ -265,6 +263,7 @@ function App() {
                       element={
                         <TasksPage
                           tasks={tasks}
+                          setTasks={setTasks}
                           // tasksCollectionRef={tasksCollectionRef}
                           // getTasks={getTasks}
                           completedList={completedList}

@@ -5,12 +5,7 @@ import { addDoc, getDocs } from "firebase/firestore";
 import { message } from "antd";
 import ImportanceSelectDropdown from "./ImportanceSelectDropdown";
 
-const AddTaskModal = ({
-  tasksCollectionRef,
-  setTasks,
-  filteredToDo,
-  selectedProject,
-}) => {
+const AddTaskModal = ({ tasks, setTasks, filteredToDo, selectedProject }) => {
   const [modal, setModal] = useState(false);
   const [task, setTask] = useState("");
   const [date, setDate] = useState("");
@@ -18,18 +13,23 @@ const AddTaskModal = ({
   const [description, setDescriiption] = useState("");
   const [importanceLevel, setImportanceLevel] = useState(0);
 
-  const createTask = async () => {
-    // {
-    //     task: task,
-    //     description: description,
-    //     timestamp: Date.now(),
-    //     date: date,
-    //     complete: false,
-    //     project_Id: selectedProject.id,
-    //     importance_level: importanceLevel,
-    //   }
-    //GetTasks//
+  function addNewTask(task) {
+    let tempTask = [task, ...tasks];
+    setTasks(tempTask);
+  }
+  const createTask = () => {
+    let newTask = {
+      task: task,
+      description: description,
+      timestamp: Date.now(),
+      date: date,
+      complete: false,
+      project_Id: selectedProject.id,
+      importance_level: importanceLevel,
+    };
+    addNewTask(newTask);
     added();
+    console.log(tasks);
   };
 
   useEffect(() => {
@@ -71,6 +71,7 @@ const AddTaskModal = ({
     });
   };
 
+  console.log(tasks);
   return (
     <>
       {contextHolder}
@@ -86,7 +87,6 @@ const AddTaskModal = ({
         onCancel={() => handleCancel()}
       >
         <AddTaskForm
-          tasksCollectionRef={tasksCollectionRef}
           handleSubmit={handleSubmit}
           setTask={setTask}
           setDate={setDate}

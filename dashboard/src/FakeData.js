@@ -1,23 +1,28 @@
+import facebook from "./ProjectThumbnails/Facebook.jpeg";
+import instagram from "./ProjectThumbnails/Instagram.jpeg";
+import linkedin from "./ProjectThumbnails/linkedin.png";
+import twitter from "./ProjectThumbnails/Twitter.jpeg";
+
 const FakeProjects = [
   {
     id: 1,
-    name: "App 1",
-    thumbnail_Url: "",
+    name: "Facebook",
+    thumbnail_Url: facebook,
   },
   {
     id: 2,
-    name: "App 2",
-    thumbnail_Url: "",
+    name: "Instagram",
+    thumbnail_Url: instagram,
   },
   {
     id: 3,
-    name: "App 3",
-    thumbnail_Url: "",
+    name: "LinkedIn",
+    thumbnail_Url: linkedin,
   },
   {
     id: 4,
-    name: "App 4",
-    thumbnail_Url: "",
+    name: "Twitter",
+    thumbnail_Url: twitter,
   },
 ];
 

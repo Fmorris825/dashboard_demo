@@ -32,9 +32,9 @@ const ProjectsPage = ({
   projects,
   setTasks,
   tasks,
-  tasksCollectionRef,
+
   setProjects,
-  projectsCollectionRef,
+
   filterCompleted,
   filteredToDo,
 }) => {
@@ -149,7 +149,7 @@ const ProjectsPage = ({
         {" "}
         <SubHeader text="Task Workspace" />
         <AddTaskModal
-          tasksCollectionRef={tasksCollectionRef}
+          tasks={tasks}
           setTasks={setTasks}
           selectedProject={selectedProject}
         />{" "}
