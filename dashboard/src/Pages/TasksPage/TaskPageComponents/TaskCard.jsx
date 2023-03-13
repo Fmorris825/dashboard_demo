@@ -33,6 +33,7 @@ const TaskCard = ({
       actions={[
         <EditTaskButton
           selectedTask={task}
+          tasks={tasks}
           setTasks={setTasks}
           filterCompleted={filterCompleted}
           filteredToDo={filteredToDo}
@@ -49,6 +50,7 @@ const TaskCard = ({
           setTasks={setTasks}
           filterCompleted={filterCompleted}
           filteredToDo={filteredToDo}
+          tasks={tasks}
         />,
       ]}
     >

@@ -32,9 +32,6 @@ const ProjectsPage = ({
   projects,
   setTasks,
   tasks,
-
-  setProjects,
-
   filterCompleted,
   filteredToDo,
 }) => {
@@ -126,7 +123,6 @@ const ProjectsPage = ({
     setSelectedProject(event);
   };
 
-  console.log(projectTaskList, tasks);
   return selectedProject ? (
     <div>
       <ProjectDropdownMenu items={items} onClick={onClick} />

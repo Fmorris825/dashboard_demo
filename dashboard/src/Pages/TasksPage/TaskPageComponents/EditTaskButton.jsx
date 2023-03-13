@@ -7,6 +7,7 @@ import ImportanceSelectDropdown from "./ImportanceSelectDropdown";
 const EditTaskButton = ({
   selectedTask,
   setTasks,
+  tasks,
   filterCompleted,
   filteredToDo,
 }) => {
@@ -16,23 +17,19 @@ const EditTaskButton = ({
   const [importanceLevel, setImportanceLevel] = useState(0);
 
   const showModal = () => {
-    console.log(selectedTask);
     setIsModalOpen(true);
   };
 
-  const updateTask = async (id) => {
-    const newFields = {
-      task: task,
-      description: description,
-      importance_level: importanceLevel,
-    };
+  function updateTask(editTask) {
+    editTask.task = task;
+    editTask.description = description;
+    editTask.importance_level = importanceLevel;
+    let tempTaskList = [...tasks];
+    setTasks(tempTaskList);
+  }
 
-    //GetTasks//
-  };
-
-  function handleSubmit(id) {
-    console.log(id);
-    updateTask(id);
+  function handleSubmit(task) {
+    updateTask(task);
     console.log("Success");
     setDescriiption("");
     setTask("");
@@ -59,7 +56,7 @@ const EditTaskButton = ({
       </button>
       <Modal
         open={isModalOpen}
-        onOk={() => handleSubmit(selectedTask.id)}
+        onOk={() => handleSubmit(selectedTask)}
         onCancel={() => handleCancel()}
       >
         <h3>Edit "{selectedTask.task}" Task</h3>
