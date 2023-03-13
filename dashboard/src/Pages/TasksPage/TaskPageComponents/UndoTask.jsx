@@ -5,7 +5,7 @@ import { message } from "antd";
 
 const UndoTask = ({
   selectedTask,
-  getTasks,
+  tasks,
   setTasks,
   filterCompleted,
   filteredToDo,
@@ -15,15 +15,10 @@ const UndoTask = ({
     message.info("Task is in 'To do' List");
   };
 
-  const Undo = async (id) => {
-    const taskDoc = doc(db, "Tasks", id);
-    const newFields = { complete: false };
-    await updateDoc(taskDoc, newFields);
-    GoogleCloudService.googleFirebaseGETRequestTasks(
-      setTasks,
-      filterCompleted,
-      filteredToDo
-    );
+  const Undo = async (undoTask) => {
+    undoTask.complete = false;
+    let tempTaskList = [...tasks];
+    setTasks(tempTaskList);
     undo();
   };
   return (
@@ -33,7 +28,7 @@ const UndoTask = ({
         key="list-loadmore-edit"
         style={{ backgroundColor: "inherit" }}
         onClick={() => {
-          Undo(selectedTask.id);
+          Undo(selectedTask);
         }}
       >
         <UndoOutlined
