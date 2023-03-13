@@ -64,5 +64,16 @@ const FakeTasks = [
     timestamp: "",
   },
 ];
+const futureProjects = [
+  {
+    complete: false,
+    date: "9/2/2023",
+    description: "Create Super Cool Project",
+    importance_level: 0,
+    project_Id: 1,
+    task: "Build Awesome Project",
+    timestamp: "",
+  },
+];
 
-export default { FakeProjects, FakeTasks };
+export default { FakeProjects, FakeTasks, futureProjects };

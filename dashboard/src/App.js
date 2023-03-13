@@ -46,6 +46,7 @@ import ErrorBoundary from "antd/es/alert/ErrorBoundary";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import ResourcePage from "./Pages/ResourcesPage/ResourcePage";
 import DemoInfoAlert from "./components/DemoInfoAlert";
+import Backlog from "./Pages/BackogPage/Backlog";
 
 //Import Simplifier//
 
@@ -277,7 +278,10 @@ function App() {
                       }
                     ></Route>
                     <Route path="/planning" element={<PlanningPage />}></Route>
-                    <Route path="/backlog" element={<div>Backlog</div>}></Route>
+                    <Route
+                      path="/backlog"
+                      element={<Backlog tasks={tasks} setTasks={setTasks} />}
+                    ></Route>
                     <Route path="/resources" element={<ResourcePage />}></Route>
                     <Route path="/links" element={<ContactPage />}></Route>
                   </Routes>
