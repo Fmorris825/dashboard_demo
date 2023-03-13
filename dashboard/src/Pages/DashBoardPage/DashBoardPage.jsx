@@ -5,7 +5,9 @@ import ProgressModule from "./ProgressComponents/ProgressModule";
 import LoadingTile from "./DashBoardPageComponents/LoadingTile";
 import NewsModule from "./NewsComponents/NewsModule";
 import GreetingHeader from "../../components/GreetingHeader";
-import { Row } from "antd";
+import { Row, Col } from "antd";
+import TodaysWeather from "./WeatherComponents/TodaysWeather";
+import ForecastCards from "./WeatherComponents/ForecastCards";
 
 const DashBoardPage = ({
   tasks,
@@ -30,18 +32,26 @@ const DashBoardPage = ({
   return (
     <div>
       <GreetingHeader />
-      <WeatherModule yahooWeather={yahooWeather} />
-      <Row className="moduleRow">
-        <ProgressModule
-          list={roundCompleted}
-          completedList={completedList}
-          completedListLength={completedListLength}
-          toDoListLength={toDoListLength}
-          tasksLength={tasksListLength}
-        />
+      <div className="moduleRow">
+        {/* <WeatherModule yahooWeather={yahooWeather} /> */}
+        <Col className="dashboardSpacing">
+          <Row className="space-evenly">
+            <TodaysWeather yahooWeather={yahooWeather} />
+            <NewsModule news={news} />
+          </Row>
+          <Row className="center">
+            <ProgressModule
+              list={roundCompleted}
+              completedList={completedList}
+              completedListLength={completedListLength}
+              toDoListLength={toDoListLength}
+              tasksLength={tasksListLength}
+            />
+          </Row>
+        </Col>
 
-        <NewsModule news={news} />
-      </Row>
+        <ForecastCards yahooWeather={yahooWeather} />
+      </div>
     </div>
   );
 };

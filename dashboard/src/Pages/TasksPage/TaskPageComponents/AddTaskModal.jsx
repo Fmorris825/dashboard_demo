@@ -29,7 +29,6 @@ const AddTaskModal = ({ tasks, setTasks, filteredToDo, selectedProject }) => {
     };
     addNewTask(newTask);
     added();
-    console.log(tasks);
   };
 
   useEffect(() => {
@@ -71,7 +70,6 @@ const AddTaskModal = ({ tasks, setTasks, filteredToDo, selectedProject }) => {
     });
   };
 
-  console.log(tasks);
   return (
     <>
       {contextHolder}

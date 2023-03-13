@@ -32,7 +32,7 @@ h2 {
 }
 h3 {
   font-family: "Lilita One", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .brand {
@@ -71,4 +71,14 @@ button:hover {
 
 .Header {
   margin: 5px 0px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.space-evenly {
+  display: flex;
+  justify-content: space-evenly;
 }

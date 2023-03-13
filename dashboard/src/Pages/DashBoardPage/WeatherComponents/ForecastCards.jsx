@@ -6,16 +6,14 @@ import WeatherModule from "./WeatherModule";
 
 const ForecastCards = ({ yahooWeather }) => {
   return (
-    <Row className="forecastCardsContainer Container ">
-      <Row>
-        <Header headerText="Weekly Forecast" />
-      </Row>
-      <Row>
+    <div className="forecastCardsContainer Container ">
+      <Header headerText="Weekly Forecast" />
+      <Row className="forecastCardsCol">
         {yahooWeather.forecasts.map((forecast, key) => {
           return <ForecastCard forecast={forecast} index={key} />;
         })}
       </Row>
-    </Row>
+    </div>
   );
 };
 
