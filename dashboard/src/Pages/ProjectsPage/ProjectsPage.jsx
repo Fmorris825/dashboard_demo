@@ -160,6 +160,7 @@ const ProjectsPage = ({
               {" "}
               <SubHeader text="Tasks to be done" />
               <TasksList
+                tasks={tasks}
                 setTasks={setTasks}
                 list={toDoList}
                 isLoading={isLoading}
@@ -173,6 +174,7 @@ const ProjectsPage = ({
             <div className="list">
               <SubHeader text="Completed Task" />
               <TasksList
+                tasks={tasks}
                 setTasks={setTasks}
                 list={completedList}
                 isLoading={isLoading}

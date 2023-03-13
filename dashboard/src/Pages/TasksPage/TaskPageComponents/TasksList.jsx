@@ -7,6 +7,7 @@ import LoadingTile from "../../DashBoardPage/DashBoardPageComponents/LoadingTile
 import TaskCard from "./TaskCard";
 
 const TasksList = ({
+  tasks,
   list,
   setTasks,
   isLoading,
@@ -27,6 +28,7 @@ const TasksList = ({
       dataSource={list}
       renderItem={(task) => (
         <TaskCard
+          tasks={tasks}
           task={task}
           multiComponent={multiComponent}
           setTasks={setTasks}

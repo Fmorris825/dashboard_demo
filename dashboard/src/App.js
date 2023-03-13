@@ -45,6 +45,7 @@ import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage";
 import ErrorBoundary from "antd/es/alert/ErrorBoundary";
 import ContactPage from "./Pages/ContactPage/ContactPage";
 import ResourcePage from "./Pages/ResourcesPage/ResourcePage";
+import DemoInfoAlert from "./components/DemoInfoAlert";
 
 //Import Simplifier//
 
@@ -227,6 +228,7 @@ function App() {
                 }}
               >
                 <div>
+                  <DemoInfoAlert />
                   <Routes>
                     <Route
                       path="/"

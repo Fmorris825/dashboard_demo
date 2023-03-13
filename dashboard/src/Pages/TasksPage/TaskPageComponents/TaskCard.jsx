@@ -7,8 +7,9 @@ import { FireFilled } from "@ant-design/icons";
 
 const TaskCard = ({
   task,
-  multiComponent,
+  tasks,
   setTasks,
+  multiComponent,
   filterCompleted,
   filteredToDo,
 }) => {
@@ -37,6 +38,7 @@ const TaskCard = ({
           filteredToDo={filteredToDo}
         />,
         <DeleteTaskButton
+          tasks={tasks}
           task={task}
           setTasks={setTasks}
           filterCompleted={filterCompleted}

@@ -14,8 +14,8 @@ const AddTaskModal = ({ tasks, setTasks, filteredToDo, selectedProject }) => {
   const [importanceLevel, setImportanceLevel] = useState(0);
 
   function addNewTask(task) {
-    let tempTask = [task, ...tasks];
-    setTasks(tempTask);
+    let tempTaskList = [task, ...tasks];
+    setTasks(tempTaskList);
   }
   const createTask = () => {
     let newTask = {

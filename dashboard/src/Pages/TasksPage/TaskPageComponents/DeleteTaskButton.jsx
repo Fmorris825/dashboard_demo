@@ -6,6 +6,7 @@ import { CloseCircleTwoTone } from "@ant-design/icons";
 
 const DeleteTaskButton = ({
   task,
+  tasks,
   setTasks,
   filterCompleted,
   filteredToDo,
@@ -18,8 +19,10 @@ const DeleteTaskButton = ({
     });
   };
 
-  const deleteTask = async (id) => {
-    //GetTasks//
+  const deleteTask = (selectedTask) => {
+    let tempTaskList = tasks.filter((task) => selectedTask !== task);
+    setTasks(tempTaskList);
+    console.log("delete");
     deletion();
   };
 
@@ -30,7 +33,7 @@ const DeleteTaskButton = ({
         key="list-loadmore-edit"
         style={{ backgroundColor: "inherit" }}
         onClick={() => {
-          deleteTask(task.id);
+          deleteTask(task);
         }}
       >
         <CloseCircleTwoTone
