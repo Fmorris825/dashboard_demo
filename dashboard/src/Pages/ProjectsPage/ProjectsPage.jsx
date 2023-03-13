@@ -123,6 +123,7 @@ const ProjectsPage = ({
     setSelectedProject(event);
   };
 
+  console.log(selectedProject);
   return selectedProject ? (
     <div>
       <ProjectDropdownMenu items={items} onClick={onClick} />
@@ -186,8 +187,9 @@ const ProjectsPage = ({
   ) : (
     <div>
       {" "}
-      <ProjectDropdownMenu items={items} onClick={onClick} />
+      {/* <ProjectDropdownMenu items={items} onClick={onClick} /> */}
       <div className="Container">
+        <SubHeader text="Select a Project from the swiper." />
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
@@ -204,7 +206,7 @@ const ProjectsPage = ({
                   className="slideImg"
                   src={project.thumbnail_Url}
                   value={project}
-                  onClick={(event) => setSelectedProject(event.target.value)}
+                  onClick={(event) => handleSelect(project)}
                 />
               </SwiperSlide>
             );

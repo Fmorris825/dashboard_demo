@@ -36,6 +36,12 @@ const DemoInfoAlert = () => {
               Resumé
             </a>
             <span>.</span>
+            <p>
+              Fred created this application to stremline his efficiency and
+              focus, to create quicker application build times and enhance
+              organization. He keeps all of his perosnal links and resources
+              stored within the application for a one-stop shop.
+            </p>
           </div>
         }
         type="info"
