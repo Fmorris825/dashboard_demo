@@ -8,6 +8,7 @@ const CompleteTaskButton = ({
   setTasks,
   filterCompleted,
   filteredToDo,
+  tasks,
 }) => {
   const [messageApi, contextHolder] = message.useMessage();
   const success = () => {
@@ -17,8 +18,10 @@ const CompleteTaskButton = ({
     });
   };
 
-  const CompleteTask = async (id) => {
-    //GetTasks//
+  const CompleteTask = async (completeTask) => {
+    completeTask.complete = true;
+    let tempTaskList = [...tasks];
+    setTasks(tempTaskList);
     success();
   };
   return (
@@ -28,7 +31,7 @@ const CompleteTaskButton = ({
         key="list-loadmore-edit"
         style={{ backgroundColor: "inherit" }}
         onClick={() => {
-          CompleteTask(selectedTask.id);
+          CompleteTask(selectedTask);
         }}
       >
         <CheckCircleTwoTone
