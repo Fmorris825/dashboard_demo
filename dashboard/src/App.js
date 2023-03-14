@@ -35,6 +35,7 @@ import ContactPage from "./Pages/ContactPage/ContactPage";
 import ResourcePage from "./Pages/ResourcesPage/ResourcePage";
 import DemoInfoAlert from "./components/DemoInfoAlert";
 import Backlog from "./Pages/BackogPage/Backlog";
+import DemoModal from "./components/DemoModal";
 
 //Import Simplifier//
 
@@ -83,7 +84,7 @@ function App() {
   const [news, setNews] = useState({});
 
   // User/Location state variables for Demo //
-  const [user, setUser] = useState("");
+  const [user, setUser] = useState(false);
   const [location, setLocation] = useState("");
 
   useEffect(() => {
@@ -91,7 +92,7 @@ function App() {
     //News API GET Request//
     ApiService.getRequest(
       "https://yahoo-weather5.p.rapidapi.com/weather",
-      { location: "Paris", format: "json", u: "f" },
+      { location: location, format: "json", u: "f" },
       {
         "X-RapidAPI-Key": "e79d90cae2msh5521f68907c95b5p178094jsncb7add5f2fc5",
         "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
@@ -109,7 +110,7 @@ function App() {
 
       setNews
     );
-  }, []);
+  }, [location]);
 
   useEffect(() => {
     filterCompleted();
@@ -156,7 +157,8 @@ function App() {
     }
   };
 
-  return (
+  console.log(user, location);
+  return user ? (
     <div className={appDisplay}>
       <ConfigProvider
       // theme={{
@@ -230,6 +232,7 @@ function App() {
                           yahooWeather={yahooWeather}
                           news={news.articles}
                           isLoading={isLoading}
+                          user={user}
                         />
                       }
                     ></Route>
@@ -275,6 +278,75 @@ function App() {
                     <Route path="/links" element={<ContactPage />}></Route>
                   </Routes>
                 </div>
+              </Content>
+            </Layout>
+          </Layout>
+        </Layout>{" "}
+      </ConfigProvider>
+    </div>
+  ) : (
+    <div className={appDisplay}>
+      <ConfigProvider
+      // theme={{
+      //   token: {
+      //     colorPrimary: `#00b96b`,
+      //     colorBgLayout: `rgba(128, 128, 128, 0.39)`,
+      //     colorBgBase: `rgba(128, 128, 128, 0.39)`,
+      //     colorBgContainer: `rgba(128, 128, 128, 0.39)`,
+      //   },
+      // }}
+      >
+        <Layout>
+          <Header className="header">
+            <h1 className="brand">HOMEBASE</h1>
+            <Switch defaultChecked onChange={onChange} />
+          </Header>
+          <Layout>
+            <Sider
+              width={200}
+              style={{
+                background: colorBgContainer,
+              }}
+            >
+              <Menu
+                onClick={({ key }) => {
+                  navigate(key);
+                }}
+                mode="inline"
+                defaultSelectedKeys={["/"]}
+                defaultOpenKeys={["sub1"]}
+                style={{
+                  height: "100%",
+                  borderRight: 0,
+                  backgroundColor: darkMode,
+                }}
+                items={navItems}
+              />
+            </Sider>
+            <Layout
+              style={{
+                padding: "24px 24px 24px",
+              }}
+            >
+              {/* <Breadcrumb
+              style={{
+                margin: "16px 0",
+              }}
+            >
+              <Breadcrumb.Item>Home</Breadcrumb.Item>
+              <Breadcrumb.Item>List</Breadcrumb.Item>
+              <Breadcrumb.Item>App</Breadcrumb.Item>
+            </Breadcrumb> */}
+              <Content
+                style={{
+                  padding: 24,
+                  margin: 0,
+                  minHeight: 280,
+                  backgroundColor: darkMode,
+                }}
+              >
+                {" "}
+                <DemoModal setUser={setUser} setLocation={setLocation} />
               </Content>
             </Layout>
           </Layout>

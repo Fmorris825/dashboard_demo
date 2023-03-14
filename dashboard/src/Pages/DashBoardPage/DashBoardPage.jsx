@@ -15,6 +15,7 @@ const DashBoardPage = ({
   completedList,
   yahooWeather,
   news,
+  user,
 }) => {
   const completedPercentage = (completedList.length / tasks.length) * 100;
   const roundCompleted = completedPercentage.toFixed(0);
@@ -31,7 +32,7 @@ const DashBoardPage = ({
   }
   return (
     <div>
-      <GreetingHeader />
+      <GreetingHeader user={user} />
       <div className="moduleRow">
         {/* <WeatherModule yahooWeather={yahooWeather} /> */}
         <Col className="dashboardSpacing">

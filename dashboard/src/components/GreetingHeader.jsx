@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const GreetingHeader = ({ header }) => {
+const GreetingHeader = ({ user }) => {
   const [time, setTime] = useState("");
   const [hour, setHour] = useState(0);
   const [greeting, setGreeting] = useState("Good Morning");
@@ -29,7 +29,9 @@ const GreetingHeader = ({ header }) => {
   }
   return (
     <>
-      <h2>{greeting}, Fred</h2>
+      <h2>
+        {greeting}, {user}
+      </h2>
     </>
   );
 };
