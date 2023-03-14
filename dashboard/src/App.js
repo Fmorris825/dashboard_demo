@@ -1,27 +1,16 @@
-// General Imports
-import axios from "axios";
+// General Imports //
 import React from "react";
 import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate } from "react-router-dom";
+
+// Data Imports //
+import FakeData from "./FakeData";
 import keys from "./keys";
 import ApiService from "./ApiService";
-
-import FakeData from "./FakeData";
 
 // CSS Imports //
 import "antd/dist/reset.css";
 import "./App.css";
-
-// Firebase Imports //
-// import { db } from "./config";
-import {
-  collection,
-  getDocs,
-  //   addDoc,
-  //   updateDoc,
-  //   doc,
-  //   deleteDoc,
-} from "firebase/firestore";
 
 // Icon Imports //
 import {
@@ -40,7 +29,6 @@ import { Layout, Menu, theme, Switch, ConfigProvider } from "antd";
 import TasksPage from "./Pages/TasksPage/TasksPage";
 import PlanningPage from "./Pages/PlanningPage/PlanningPage";
 import DashBoardPage from "./Pages/DashBoardPage/DashBoardPage";
-import LoadingTile from "./Pages/DashBoardPage/DashBoardPageComponents/LoadingTile";
 import ProjectsPage from "./Pages/ProjectsPage/ProjectsPage";
 import ErrorBoundary from "antd/es/alert/ErrorBoundary";
 import ContactPage from "./Pages/ContactPage/ContactPage";
@@ -82,12 +70,9 @@ function App() {
 
   const [isLoading, setIsLoading] = useState(false);
 
+  //Application State Variables//
   const [tasks, setTasks] = useState(FakeData.FakeTasks);
-  // const tasksCollectionRef = collection(db, "Tasks");
-
   const [projects, setProjects] = useState(FakeData.FakeProjects);
-  // const projectsCollectionRef = collection(db, "Projects");
-
   const [completedList, setCompletedList] = useState({});
   const [toDoList, setDoList] = useState({});
   const [yahooWeather, setYahooWeather] = useState(false);
@@ -97,12 +82,16 @@ function App() {
   const [date, setDate] = useState("");
   const [news, setNews] = useState({});
 
+  // User/Location state variables for Demo //
+  const [user, setUser] = useState("");
+  const [location, setLocation] = useState("");
+
   useEffect(() => {
     console.log(FakeData.FakeTasks);
     //News API GET Request//
     ApiService.getRequest(
       "https://yahoo-weather5.p.rapidapi.com/weather",
-      { location: "Irving", format: "json", u: "f" },
+      { location: "Paris", format: "json", u: "f" },
       {
         "X-RapidAPI-Key": "e79d90cae2msh5521f68907c95b5p178094jsncb7add5f2fc5",
         "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
