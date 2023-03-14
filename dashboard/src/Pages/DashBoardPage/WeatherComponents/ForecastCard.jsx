@@ -11,6 +11,8 @@ import sunny from "../../../WeatherIcons/Sunny.png";
 import thunderstorms from "../../../WeatherIcons/Thunderstorms.png";
 import clear from "../../../WeatherIcons/Clear.png";
 import windy from "../../../WeatherIcons/Windy.png";
+import snow from "../../../WeatherIcons/Snow.png";
+import sleet from "../../../WeatherIcons/Sleet.png";
 
 const { Meta } = Card;
 
@@ -26,7 +28,11 @@ const ForecastCard = ({ forecast }) => {
     icon = partlyCloudy;
   } else if (forecast.text === "Scattered Showers") {
     icon = scatteredShowers;
-  } else if (forecast.text === "Showers" || forecast.text === "Rain") {
+  } else if (
+    forecast.text === "Showers" ||
+    forecast.text === "Rain" ||
+    forecast.text === "Drizzle"
+  ) {
     icon = showers;
   } else if (forecast.text === "Sunny") {
     icon = sunny;
@@ -34,6 +40,10 @@ const ForecastCard = ({ forecast }) => {
     icon = thunderstorms;
   } else if (forecast.text === "Windy") {
     icon = windy;
+  } else if (forecast.text === "Snow") {
+    icon = snow;
+  } else if (forecast.text === "Sleet") {
+    icon = sleet;
   } else if (
     forecast.text === "Clear" ||
     forecast.text === "Mostly Clear" ||

@@ -11,6 +11,8 @@ import sunny from "../../../WeatherIcons/Sunny.png";
 import thunderstorms from "../../../WeatherIcons/Thunderstorms.png";
 import clear from "../../../WeatherIcons/Clear.png";
 import windy from "../../../WeatherIcons/Windy.png";
+import snow from "../../../WeatherIcons/Snow.png";
+import sleet from "../../../WeatherIcons/Sleet.png";
 
 import WeatherIconSelectFunction from "./WeatherIconSelectFunction";
 
@@ -38,6 +40,7 @@ const TodaysWeather = ({ yahooWeather, iconFilter }) => {
     icon = scatteredShowers;
   } else if (
     weather.condition.text === "Showers" ||
+    weather.condition.text === "Drizzle" ||
     weather.condition.text === "Rain"
   ) {
     icon = showers;
@@ -47,6 +50,10 @@ const TodaysWeather = ({ yahooWeather, iconFilter }) => {
     icon = thunderstorms;
   } else if (weather.condition.text === "Windy") {
     icon = windy;
+  } else if (weather.condition.text === "Snow") {
+    icon = snow;
+  } else if (weather.condition.text === "Sleet") {
+    icon = sleet;
   } else if (
     weather.condition.text === "Clear" ||
     weather.condition.text === "Mostly Clear" ||
