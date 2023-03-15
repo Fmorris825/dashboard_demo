@@ -4,6 +4,7 @@ import { CheckOutlined, CloseOutlined } from "@ant-design/icons";
 import Header from "../../../components/Header";
 import StatisticCard from "./StatisticCard";
 import SubHeader from "../../../components/SubHeader";
+import DemoInfoAlert from "../../../components/DemoInfoAlert";
 
 const ProgressModule = ({
   list,
@@ -13,6 +14,15 @@ const ProgressModule = ({
 }) => {
   return (
     <div className="Container progressContainer">
+      <DemoInfoAlert
+        message="Progress module displays task progress."
+        description={
+          <div>
+            The dashboard homepage shows all tasks within the application and
+            the projects page displays task progress for selected projects.
+          </div>
+        }
+      />
       <Header headerText="Task Progress" />
       <Progress
         percent={list}

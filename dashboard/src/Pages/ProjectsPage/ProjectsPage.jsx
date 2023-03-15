@@ -27,6 +27,7 @@ import { async } from "@firebase/util";
 import UndoTask from "../TasksPage/TaskPageComponents/UndoTask";
 import ProgressModule from "../DashBoardPage/ProgressComponents/ProgressModule";
 import SubHeader from "../../components/SubHeader";
+import DemoInfoAlert from "../../components/DemoInfoAlert";
 
 const ProjectsPage = ({
   projects,
@@ -143,7 +144,15 @@ const ProjectsPage = ({
       </Row>
 
       <div className="Container">
-        {" "}
+        <DemoInfoAlert
+          message="This is a colleciton of all task what specific details they entail."
+          description={
+            <div>
+              Tasks can be created, edited, deleted, and marked as completed
+              here in the tasks section.
+            </div>
+          }
+        />
         <SubHeader text="Task Workspace" />
         <AddTaskModal
           tasks={tasks}
@@ -189,7 +198,10 @@ const ProjectsPage = ({
       {" "}
       {/* <ProjectDropdownMenu items={items} onClick={onClick} /> */}
       <div className="Container">
-        <SubHeader text="Select a Project from the swiper." />
+        <DemoInfoAlert
+          message="Here you can select a project to view specific details about each one."
+          description={<div>Select a project from the swiper.</div>}
+        />
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
