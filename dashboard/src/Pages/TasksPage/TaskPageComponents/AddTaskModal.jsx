@@ -4,6 +4,7 @@ import { Form, Input } from "antd";
 import { addDoc, getDocs } from "firebase/firestore";
 import { message } from "antd";
 import ImportanceSelectDropdown from "./ImportanceSelectDropdown";
+import ImportanceLevelRadio from "./ImportanceLevelRadio";
 
 const AddTaskModal = ({ tasks, setTasks, filteredToDo, selectedProject }) => {
   const [modal, setModal] = useState(false);
@@ -132,7 +133,8 @@ function AddTaskForm({
         }}
         value={description}
       />
-      <ImportanceSelectDropdown setImportanceLevel={setImportanceLevel} />
+      {/* <ImportanceSelectDropdown setImportanceLevel={setImportanceLevel} /> */}
+      <ImportanceLevelRadio setImportanceLevel={setImportanceLevel} />
     </Form>
   );
 }
