@@ -1,28 +1,51 @@
-import facebook from "./ProjectThumbnails/Facebook.jpeg";
-import instagram from "./ProjectThumbnails/Instagram.jpeg";
-import linkedin from "./ProjectThumbnails/linkedin.png";
-import twitter from "./ProjectThumbnails/Twitter.jpeg";
-
+import streamline from "./Thumbnails/Streamline.png";
+import streamlineDemo from "./Thumbnails/StreamlineDemo.png";
+import MDR from "./Thumbnails/MorrisDeltaRealty.png";
+import portfolio from "./Thumbnails/Portfolio.png";
+import movieApp from "./Thumbnails/MovieApp.png";
+import YTC from "./Thumbnails/YoutubeClone.png";
 const FakeProjects = [
   {
     id: 1,
-    name: "Facebook",
-    thumbnail_Url: facebook,
+    name: "Streamline",
+    thumbnail_Url: streamline,
+    site: "",
+    github: "",
   },
   {
     id: 2,
-    name: "Instagram",
-    thumbnail_Url: instagram,
+    name: "Streamline Demo",
+    thumbnail_Url: streamlineDemo,
+    site: "",
+    github: "",
   },
   {
     id: 3,
-    name: "LinkedIn",
-    thumbnail_Url: linkedin,
+    name: "Morris Delta Realty",
+    thumbnail_Url: MDR,
+    site: "",
+    github: "",
   },
   {
     id: 4,
-    name: "Twitter",
-    thumbnail_Url: twitter,
+    name: "Portfolio v1",
+    thumbnail_Url: portfolio,
+    site: "",
+    github: "",
+  },
+  {
+    id: 5,
+    name: "Movie Application",
+    thumbnail_Url: movieApp,
+    site: "",
+    github: "",
+  },
+  {
+    id: 6,
+    name: "Youtube Clone",
+    thumbnail_Url: YTC,
+    site: "",
+    github: "",
   },
 ];
 

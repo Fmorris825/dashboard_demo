@@ -172,7 +172,7 @@ function App() {
       >
         <Layout>
           <Header className="header">
-            <h1 className="brand">HOMEBASE</h1>
+            <h1 className="brand">STREAMLINE</h1>
             {/* <Switch defaultChecked onChange={onChange} /> */}
           </Header>
           <Layout>

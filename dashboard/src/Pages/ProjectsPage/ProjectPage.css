@@ -10,3 +10,7 @@
   display: flex;
   justify-content: space-between;
 }
+
+.mySwiper {
+  height: 320px;
+}
