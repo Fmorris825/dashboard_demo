@@ -18,7 +18,7 @@ const generalResources = [
       "A collection of repeatable SVG background patterns for you to use on your web projects.",
   },
   {
-    name: "Hereo Icons",
+    name: "Hero Icons",
     url: "https://heroicons.com/",
     description:
       "Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS.",

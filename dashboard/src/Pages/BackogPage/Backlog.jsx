@@ -3,11 +3,13 @@ import TasksList from "../TasksPage/TaskPageComponents/TasksList";
 import FakeData from "../../FakeData";
 import ErrorBoundary from "antd/es/alert/ErrorBoundary";
 import CompleteTaskButton from "../TasksPage/TaskPageComponents/CompleteTaskButton";
+import DemoInfoAlert from "../../components/DemoInfoAlert";
 
 const Backlog = ({ tasks, setTasks }) => {
   console.log(FakeData.futureProjects);
   return (
     <div className="Container">
+      <DemoInfoAlert message="This is where Fred Stores future iteration ideas for projects and ideas for new applications." />
       <Header headerText="Future Ideas" />
       <ErrorBoundary FallbackComponent={OurFallbackComponent}>
         <TasksList

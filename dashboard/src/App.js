@@ -239,12 +239,12 @@ function App() {
                           Github
                         </a>
 
-                        <span>, and see his portfolio </span>
+                        <span>, and see his </span>
                         <a
                           href="https://portfolio-v1-mocha.vercel.app/"
                           target="_blank"
                         >
-                          here
+                          portfolio
                         </a>
                         <span>, and also view his </span>
                         <a
@@ -253,7 +253,7 @@ function App() {
                         >
                           Resumé
                         </a>
-                        <span>.</span>
+                        <span>.😁</span>
                         <p>
                           Fred created this application to stremline his
                           efficiency and focus, to create quicker application
