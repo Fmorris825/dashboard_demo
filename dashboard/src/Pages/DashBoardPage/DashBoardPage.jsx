@@ -31,15 +31,15 @@ const DashBoardPage = ({
     );
   }
   return (
-    <div>
+    <div className="page">
       <GreetingHeader user={user} />
       <div className="moduleRow">
         {/* <WeatherModule yahooWeather={yahooWeather} /> */}
         <Col className="dashboardSpacing">
-          <Row className="space-evenly">
+          <div className="space-evenly">
             <TodaysWeather yahooWeather={yahooWeather} />
             <NewsModule news={news} />
-          </Row>
+          </div>
           <Row className="center">
             <ProgressModule
               list={roundCompleted}

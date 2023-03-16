@@ -100,15 +100,15 @@ function App() {
     );
     //Yahoo Weather API GET Request//
     getNewDate();
-    // ApiService.getRequest(
-    //   "https://newsapi.org/v2/top-headlines?country=us&category=business",
-    //   null,
-    //   {
-    //     "x-api-key": keys.newsApiKey,
-    //   },
+    ApiService.getRequest(
+      "https://newsapi.org/v2/top-headlines?country=us&category=business",
+      null,
+      {
+        "x-api-key": keys.newsApiKey,
+      },
 
-    //   setNews
-    // );
+      setNews
+    );
   }, [location]);
 
   useEffect(() => {
