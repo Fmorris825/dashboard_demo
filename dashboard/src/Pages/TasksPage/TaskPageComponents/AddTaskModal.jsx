@@ -39,11 +39,11 @@ const AddTaskModal = ({ tasks, setTasks, filteredToDo, selectedProject }) => {
   function getNewDate() {
     let today = new Date(),
       date =
-        today.getDate() +
-        "/" +
+        today.getFullYear() +
+        "-" +
         (today.getMonth() + 1) +
-        "/" +
-        today.getFullYear();
+        "-" +
+        today.getDate();
     setDate(date);
   }
 
