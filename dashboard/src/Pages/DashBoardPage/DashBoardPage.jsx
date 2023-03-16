@@ -38,9 +38,6 @@ const DashBoardPage = ({
         <Col className="dashboardSpacing">
           <div className="space-evenly">
             <TodaysWeather yahooWeather={yahooWeather} />
-            <NewsModule news={news} />
-          </div>
-          <Row className="center">
             <ProgressModule
               list={roundCompleted}
               completedList={completedList}
@@ -48,7 +45,10 @@ const DashBoardPage = ({
               toDoListLength={toDoListLength}
               tasksLength={tasksListLength}
             />
-          </Row>
+          </div>
+          {/* <Row className="center">
+            <NewsModule news={news} />
+          </Row> */}
         </Col>
 
         <ForecastCards yahooWeather={yahooWeather} />

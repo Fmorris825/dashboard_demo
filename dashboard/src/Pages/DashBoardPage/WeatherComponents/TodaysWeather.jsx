@@ -19,6 +19,7 @@ import WeatherIconSelectFunction from "./WeatherIconSelectFunction";
 import Header from "../../../components/Header";
 import LoadingTile from "../DashBoardPageComponents/LoadingTile";
 import { useState } from "react";
+import SubHeader from "../../../components/SubHeader";
 
 const { Meta } = Card;
 
@@ -66,6 +67,7 @@ const TodaysWeather = ({ yahooWeather, iconFilter }) => {
   return (
     <Card loading={false} className="todayCard" bordered={false}>
       <Header headerText="Today's Weather" />
+      <h5>Current Weather:</h5>
       <Meta
         avatar={<Avatar src={icon} />}
         className="bigCardMeta"

@@ -1,11 +1,12 @@
 .weatherDetails {
   display: flex;
-  font-size: 12px;
+  font-size: 18px;
   height: auto;
 }
 
 .detailsContainer {
-  padding-top: 15px;
+  padding-top: 25px;
+  margin-left: 10px;
 }
 
 .forecastCards {
@@ -44,11 +45,13 @@
 }
 
 .todayCard {
-  width: 300px;
+  width: 30%;
   height: inherit;
   display: flex;
   padding: 15px;
-  margin: 10px 0px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
 }
 .ant-avatar-image img {
   height: 20px;
@@ -56,15 +59,16 @@
 }
 
 .ant-card .ant-card-meta-title {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .bigCardMeta {
-  font-size: 10px;
+  font-size: 18px;
 }
 
 .ant-card .ant-card-meta-avatar {
   padding-inline-end: 0;
+  margin-left: 15px;
 }
 
 .progressContainer {
@@ -147,5 +151,6 @@
   vertical-align: top;
 }
 
-.dashPage {
+.bigCardMeta {
+  margin-left: 10px;
 }
