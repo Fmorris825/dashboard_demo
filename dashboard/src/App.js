@@ -101,11 +101,12 @@ function App() {
     //Yahoo Weather API GET Request//
     getNewDate();
     ApiService.getRequest(
-      "https://newsapi.org/v2/top-headlines?country=us&category=business",
+      `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${keys.newsApiKey}`,
       null,
-      {
-        "x-api-key": keys.newsApiKey,
-      },
+      null,
+      // {
+      //   "x-api-key": keys.newsApiKey,
+      // },
 
       setNews
     );
