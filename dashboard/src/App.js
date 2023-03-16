@@ -155,7 +155,7 @@ function App() {
       setAppDisplay("inactive");
     }
   };
-  console.log(yahooWeather);
+
   return user ? (
     <div className={appDisplay}>
       <ConfigProvider
