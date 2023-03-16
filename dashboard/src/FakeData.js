@@ -105,6 +105,15 @@ const FakeTasks = [
     timestamp: "",
   },
   {
+    complete: false,
+    date: "2023-03-16",
+    description: "Improve better ad task and edit task desgin for modals.",
+    importance_level: 3,
+    project_Id: 2,
+    task: "Improve Add and edit Task Design for modals.",
+    timestamp: "",
+  },
+  {
     complete: true,
     date: "2023-02-09",
     description: "Plan format and design of component and what it will entail.",
