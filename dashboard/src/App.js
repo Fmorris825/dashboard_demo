@@ -88,13 +88,12 @@ function App() {
   const [location, setLocation] = useState("");
 
   useEffect(() => {
-    console.log(FakeData.FakeTasks);
     //News API GET Request//
     ApiService.getRequest(
       "https://yahoo-weather5.p.rapidapi.com/weather",
       { location: location, format: "json", u: "f" },
       {
-        "X-RapidAPI-Key": "e79d90cae2msh5521f68907c95b5p178094jsncb7add5f2fc5",
+        "X-RapidAPI-Key": keys.weatherApiKey,
         "X-RapidAPI-Host": "yahoo-weather5.p.rapidapi.com",
       },
       setYahooWeather
