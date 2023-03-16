@@ -23,7 +23,7 @@ const DashBoardPage = ({
   const toDoListLength = toDoList.length;
   const tasksListLength = tasks.length;
 
-  if (!yahooWeather) {
+  if (!yahooWeather || !news) {
     return (
       <div className="loadingContainer">
         <LoadingTile />
