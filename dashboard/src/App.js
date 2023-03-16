@@ -85,7 +85,7 @@ function App() {
 
   // User/Location state variables for Demo //
   const [user, setUser] = useState(false);
-  const [location, setLocation] = useState("");
+  const [location, setLocation] = useState("Dallas");
 
   useEffect(() => {
     //News API GET Request//
@@ -155,8 +155,7 @@ function App() {
       setAppDisplay("inactive");
     }
   };
-
-  console.log(user, location);
+  console.log(yahooWeather);
   return user ? (
     <div className={appDisplay}>
       <ConfigProvider
