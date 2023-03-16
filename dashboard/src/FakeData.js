@@ -92,10 +92,10 @@ const futureProjects = [
     complete: false,
     date: "2023-02-011",
     description:
-      "Build ability to switch bewteen light and dark mode within Streamline application.",
+      "Utilize Docker to host a Youtube Clone application with Django Backend",
     importance_level: 0,
     project_Id: 1,
-    task: "Build Light/Dark Mode for Streamline Application",
+    task: "Use Docker to depoy past application with backend.",
     timestamp: "",
   },
   {
@@ -112,10 +112,10 @@ const futureProjects = [
     complete: false,
     date: "2023-02-015",
     description:
-      "Build ability to switch bewteen light and dark mode within streamline application.",
+      "Create mobile application to display informative information for a personal trainer.",
     importance_level: 0,
     project_Id: 1,
-    task: "Build Light/Dark Mode for Streamline Application",
+    task: "Create Personal Trainer modbile application using React Native.",
     timestamp: "",
   },
   {
@@ -126,6 +126,16 @@ const futureProjects = [
     importance_level: 0,
     project_Id: 1,
     task: "Build Light/Dark Mode for Streamline Application",
+    timestamp: "",
+  },
+  {
+    complete: false,
+    date: "2023-02-16",
+    description:
+      "Use Google firebase authentication service to integrate a user based system into the streamline app.",
+    importance_level: 0,
+    project_Id: 1,
+    task: "Google firebase authentication for users for Streamline application.",
     timestamp: "",
   },
 ];

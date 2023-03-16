@@ -1,5 +1,4 @@
 import { Avatar, List, Skeleton } from "antd";
-import portrait from "../../../portrait.jpg";
 import DeleteTaskButton from "./DeleteTaskButton";
 import EditTaskButton from "./EditTaskButton";
 import CompleteTaskButton from "./CompleteTaskButton";

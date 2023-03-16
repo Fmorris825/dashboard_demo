@@ -1,5 +1,5 @@
 import { Avatar, List, Skeleton } from "antd";
-import portrait from "../../../portrait.jpg";
+import user from "../../../user.png";
 import DeleteTaskButton from "./DeleteTaskButton";
 import EditTaskButton from "./EditTaskButton";
 import CompleteTaskButton from "./CompleteTaskButton";
@@ -56,7 +56,7 @@ const TaskCard = ({
     >
       <Skeleton avatar title={false} loading={task.loading}>
         <List.Item.Meta
-          avatar={<Avatar src={portrait} />}
+          avatar={<Avatar src={user} />}
           title={
             <div>
               <h5>
