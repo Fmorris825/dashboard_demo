@@ -10,8 +10,8 @@ const LoadingTile = ({}) => {
     >
       <Spin tip="Loading...">
         <Alert
-          message="Weather Module"
-          description="Loading Weather for local area."
+          message="Dashboard Components"
+          description="Loading Dashboard with user Data."
           type="info"
         />
       </Spin>

@@ -403,6 +403,16 @@ const FakeTasks = [
     task: "Project Thumbnails",
     timestamp: "",
   },
+  {
+    complete: false,
+    date: "2023-03-15",
+    description:
+      "Update Loading Tile Design to show tiles for all components on dashboard page",
+    importance_level: 1,
+    project_Id: 2,
+    task: "Loading Tile Refactor",
+    timestamp: "",
+  },
 ];
 
 const futureProjects = [
