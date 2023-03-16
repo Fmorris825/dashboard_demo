@@ -28,6 +28,7 @@ import UndoTask from "../TasksPage/TaskPageComponents/UndoTask";
 import ProgressModule from "../DashBoardPage/ProgressComponents/ProgressModule";
 import SubHeader from "../../components/SubHeader";
 import DemoInfoAlert from "../../components/DemoInfoAlert";
+import SelectedProjectLinks from "./ProjectsPageComponents/SelectedProjectsLinks";
 
 const ProjectsPage = ({
   projects,
@@ -142,10 +143,10 @@ const ProjectsPage = ({
           tasksLength={tasksLength}
         />
       </Row>
-
+      <SelectedProjectLinks selectedProject={selectedProject} />
       <div className="Container">
         <DemoInfoAlert
-          message="This is a colleciton of all task what specific details they entail."
+          message="Tasks are filtered into two lists here, ones that still need to be done, and completed."
           description={
             <div>
               Tasks can be created, edited, deleted, and marked as completed
