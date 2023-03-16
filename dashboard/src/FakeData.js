@@ -79,7 +79,7 @@ const FakeTasks = [
   },
   {
     complete: false,
-    date: "9/2/2023",
+    date: "2023-02-09",
     description: "Add Task 1",
     importance_level: 1,
     project_Id: 1,
@@ -90,11 +90,42 @@ const FakeTasks = [
 const futureProjects = [
   {
     complete: false,
-    date: "9/2/2023",
-    description: "Create Super Cool Project",
+    date: "2023-02-011",
+    description:
+      "Build ability to switch bewteen light and dark mode within Streamline application.",
     importance_level: 0,
     project_Id: 1,
-    task: "Build Awesome Project",
+    task: "Build Light/Dark Mode for Streamline Application",
+    timestamp: "",
+  },
+  {
+    complete: false,
+    date: "2023-02-013",
+    description:
+      "Have ability to set task deadlines and sprint lengths for projects and tasks",
+    importance_level: 0,
+    project_Id: 1,
+    task: "Design and build functionality for a planner page for Streamline application.",
+    timestamp: "",
+  },
+  {
+    complete: false,
+    date: "2023-02-015",
+    description:
+      "Build ability to switch bewteen light and dark mode within streamline application.",
+    importance_level: 0,
+    project_Id: 1,
+    task: "Build Light/Dark Mode for Streamline Application",
+    timestamp: "",
+  },
+  {
+    complete: false,
+    date: "2023-02-16",
+    description:
+      "Build ability to switch bewteen light and dark mode within streamline application.",
+    importance_level: 0,
+    project_Id: 1,
+    task: "Build Light/Dark Mode for Streamline Application",
     timestamp: "",
   },
 ];

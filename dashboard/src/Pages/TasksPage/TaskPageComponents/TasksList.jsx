@@ -16,8 +16,9 @@ const TasksList = ({
   filteredToDo,
 }) => {
   const sorted = list.sort(function (a, b) {
-    return b.timestamp.valueOf() - a.timestamp.valueOf();
+    return new Date(b.date) - new Date(a.date);
   });
+  console.log(sorted);
 
   return isLoading ? (
     <LoadingTile />
