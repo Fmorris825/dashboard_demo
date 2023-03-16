@@ -5,9 +5,8 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 
 // Data Imports //
 import FakeData from "./FakeData";
-import keys from "./keys";
 import ApiService from "./ApiService";
-import keys from "./keys.js";
+import keys from "./keys";
 
 // CSS Imports //
 import "antd/dist/reset.css";
