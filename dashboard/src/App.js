@@ -52,7 +52,7 @@ function getItem(label, key, icon, children, type) {
 }
 
 const navItems = [
-  getItem("HomeBase", "sub1", <MailOutlined />, [
+  getItem("Streamline", "sub1", <MailOutlined />, [
     getItem("Dashboard", "/", <DesktopOutlined />),
     getItem("Projects", "/projects", <FireOutlined />),
     // getItem("Tasks", "/tasks", <RobotOutlined />),
@@ -254,10 +254,10 @@ function App() {
                         </a>
                         <span>.😁</span>
                         <p>
-                          Fred created this application to stremline his
+                          Fred created this application to streamline his
                           efficiency and focus, to create quicker application
-                          build times and enhance organization. He keeps all of
-                          his perosnal links and resources stored within the
+                          build times, and enhance organization. He keeps all of
+                          his personal links and resources stored within the
                           application for a one-stop shop.
                         </p>
                       </div>
@@ -340,8 +340,8 @@ function App() {
       >
         <Layout>
           <Header className="header">
-            <h1 className="brand">HOMEBASE</h1>
-            <Switch defaultChecked onChange={onChange} />
+            <h1 className="brand">STREAMLINE</h1>
+            {/* <Switch defaultChecked onChange={onChange} /> */}
           </Header>
           <Layout>
             <Sider

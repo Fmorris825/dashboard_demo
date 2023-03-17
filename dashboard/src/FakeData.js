@@ -475,6 +475,16 @@ const futureProjects = [
     task: "Google firebase authentication for users for Streamline application.",
     timestamp: "",
   },
+  {
+    complete: false,
+    date: "2023-03-17",
+    description:
+      "Incorporate team management system where users can assign tasks to others and see thier progress.",
+    importance_level: 0,
+    project_Id: 1,
+    task: "Have a authorization sign in, to allow multiple users within Streamline Application",
+    timestamp: "",
+  },
 ];
 
 export default { FakeProjects, FakeTasks, futureProjects };
