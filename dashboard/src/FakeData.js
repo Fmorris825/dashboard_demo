@@ -437,7 +437,7 @@ const futureProjects = [
   },
   {
     complete: false,
-    date: "2023-03-11",
+    date: "2023-03-20",
     description:
       "Be able to add, delete, post, and update resources within resources page.",
     importance_level: 0,
