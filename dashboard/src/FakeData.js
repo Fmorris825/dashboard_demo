@@ -16,7 +16,7 @@ const FakeProjects = [
     id: 2,
     name: "Streamline Demo",
     thumbnail_Url: streamlineDemo,
-    site: null,
+    site: "https://dashboard-demo-git-main-fmorris825.vercel.app/",
     github: "https://github.com/Fmorris825/dashboard_demo",
   },
   {
