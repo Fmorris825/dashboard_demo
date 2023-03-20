@@ -51,9 +51,9 @@ const generalResources = [
   {
     name: "Draw SQL",
     url: "https://drawsql.app",
-    description: "Design, visualize and collaborate on entity relationship diagrams for your databases",
+    description:
+      "Design, visualize and collaborate on entity relationship diagrams for your databases",
   },
-
 ];
 
 const librariesAndFrameworks = [
@@ -128,12 +128,14 @@ const librariesAndFrameworks = [
   {
     name: "Pure",
     url: "https://purecss.io",
-    description: "A set of small, responsive CSS modules that you can use in every web project.",
+    description:
+      "A set of small, responsive CSS modules that you can use in every web project.",
   },
   {
     name: "Tailwind CSS",
     url: "https://tailwindcss.com",
-    description: "A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
+    description:
+      "A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.",
   },
 ];
 
@@ -204,13 +206,13 @@ const learningResources = [
   {
     name: "CodePen",
     url: "https://codepen.io/",
-    description: "CodePen is a social development environment for front-end designers and developers. Build and deploy a website, show off your work, build test cases to learn and debug, and find inspiration.",
+    description:
+      "CodePen is a social development environment for front-end designers and developers. Build and deploy a website, show off your work, build test cases to learn and debug, and find inspiration.",
   },
   {
     name: "Daily UI",
     url: "https://www.dailyui.co/",
     description: "Daily UI is a series of daily Design Challenge",
-    "Inspiration and Surprise Rewards",
   },
   {
     name: "React Certification",
