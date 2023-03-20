@@ -23,7 +23,7 @@ import {
 } from "@ant-design/icons";
 
 // antd Imports //
-import { Layout, Menu, theme, Switch, ConfigProvider } from "antd";
+import { Layout, Menu, theme, Switch, ConfigProvider, Space } from "antd";
 
 // Component Imports //
 import TasksPage from "./Pages/TasksPage/TasksPage";
@@ -59,8 +59,8 @@ const navItems = [
     // getItem("Planning", "/planning", <CalendarOutlined />),
     getItem("Backlog", "/backlog", <FolderOpenOutlined />),
   ]),
-  getItem("Contact Fred", "/links", <UserOutlined />),
   getItem("Resources", "/resources", <DatabaseOutlined />),
+  getItem("Contact Fred", "/links", <UserOutlined />),
 ];
 
 function App() {
@@ -254,12 +254,69 @@ function App() {
                         </a>
                         <span>.😁</span>
                         <p>
-                          Fred created this application to streamline his
-                          efficiency and focus, to create quicker application
-                          build times, and enhance organization. He keeps all of
-                          his personal links and resources stored within the
-                          application for a one-stop shop.
+                          The application can be navigated using the left side
+                          navigation panel to view{" "}
+                          <b>
+                            <i>Projects</i>
+                          </b>{" "}
+                          within the application, a{" "}
+                          <b>
+                            <i>Backlog</i>
+                          </b>{" "}
+                          of ideas that a user is saving for a later date,{" "}
+                          <b>
+                            <i>Contact Fred</i>
+                          </b>{" "}
+                          has a list of links that you can use to get in contact
+                          with Fred, &{" "}
+                          <b>
+                            <i>Resources</i>
+                          </b>{" "}
+                          is a directory of technologies that Fred uses
+                          frequently when building applications.{" "}
                         </p>
+                        <div className="space-evenly">
+                          <div>
+                            <p>This application was created to:</p>
+                            <ul>
+                              <li>
+                                Improve efficiency in build times for
+                                applications.
+                              </li>
+                              <li>
+                                Organize and streamline projects and tasks for
+                                sprints and applications.
+                              </li>
+                              <li>
+                                Act as a directory for all needed links and
+                                resources when building applications.
+                              </li>
+                            </ul>
+                          </div>
+                          <div>
+                            {" "}
+                            <div>
+                              <p>
+                                This applciation focuses on scalability and
+                                resuability within components.
+                              </p>
+                              <ul>
+                                <li>
+                                  List and alert components are built to improve
+                                  reusability within the applicaiton.
+                                </li>
+                                <li>
+                                  Organize and plan out needed details and
+                                  objectives.
+                                </li>
+                                <li>
+                                  Act as a directory for all needed resources
+                                  and links.
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     }
                   />
