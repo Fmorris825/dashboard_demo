@@ -20,6 +20,7 @@ import Header from "../../../components/Header";
 import LoadingTile from "../DashBoardPageComponents/LoadingTile";
 import { useState } from "react";
 import SubHeader from "../../../components/SubHeader";
+import DemoInfoAlert from "../../../components/DemoInfoAlert";
 
 const { Meta } = Card;
 
@@ -100,6 +101,7 @@ const TodaysWeather = ({ yahooWeather, iconFilter }) => {
           {weather.wind.chill}
         </p>
       </div>
+      <DemoInfoAlert message="All weather data is request from a Yahoo Weather API." />
     </Card>
   );
 };
