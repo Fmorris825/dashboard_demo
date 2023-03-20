@@ -306,12 +306,12 @@ function App() {
                                   reusability within the applicaiton.
                                 </li>
                                 <li>
-                                  Organize and plan out needed details and
-                                  objectives.
+                                  List and objects and mapped over to support
+                                  new data being added.
                                 </li>
                                 <li>
-                                  Act as a directory for all needed resources
-                                  and links.
+                                  Application is simple and responsive, provides
+                                  a welcoming user experience.
                                 </li>
                               </ul>
                             </div>
