@@ -30,7 +30,7 @@ const DemoModal = ({ setUser, setLocation }) => {
   return (
     <>
       <Modal
-        title="Welcome to Fred's Homebase Demo Application"
+        title="Welcome to Fred's Streamline Demo Application"
         open={open}
         confirmLoading={confirmLoading}
         closable={false}
