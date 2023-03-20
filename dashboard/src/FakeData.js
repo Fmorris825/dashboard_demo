@@ -414,12 +414,12 @@ const FakeTasks = [
   },
   {
     complete: false,
-    date: "2023-03-15",
+    date: "2023-03-20",
     description:
       "Update Loading Tile Design to show tiles for all components on dashboard page",
     importance_level: 1,
     project_Id: 2,
-    task: "Loading Tile Refactor",
+    task: "Update loading Tiles",
     timestamp: "",
   },
 ];
@@ -427,7 +427,27 @@ const FakeTasks = [
 const futureProjects = [
   {
     complete: false,
-    date: "2023-03-011",
+    date: "2023-03-20",
+    description:
+      "Be able to add, delete, post, and update projects within projects page.",
+    importance_level: 0,
+    project_Id: 1,
+    task: "CRUD for Projects",
+    timestamp: "",
+  },
+  {
+    complete: false,
+    date: "2023-03-11",
+    description:
+      "Be able to add, delete, post, and update resources within resources page.",
+    importance_level: 0,
+    project_Id: 1,
+    task: "CRUD for Resources",
+    timestamp: "",
+  },
+  {
+    complete: false,
+    date: "2023-03-11",
     description:
       "Utilize Docker to host a Youtube Clone application with Django Backend",
     importance_level: 0,
@@ -437,7 +457,7 @@ const futureProjects = [
   },
   {
     complete: false,
-    date: "2023-03-013",
+    date: "2023-03-13",
     description:
       "Have ability to set task deadlines and sprint lengths for projects and tasks",
     importance_level: 0,
@@ -447,7 +467,7 @@ const futureProjects = [
   },
   {
     complete: false,
-    date: "2023-03-015",
+    date: "2023-03-15",
     description:
       "Create mobile application to display informative information for a personal trainer.",
     importance_level: 0,
