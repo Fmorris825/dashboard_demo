@@ -27,7 +27,7 @@ const contactResources = [
   },
   {
     imgAlt: "Resumé",
-    href: "https://drive.google.com/file/d/1gL8skql4yXF-OOviznoia--6UlTfQGtC/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1xOQTNzFDrPhOGyJpRWNmL_3sKBABVcf9/view?usp=sharing",
     description: "Fred Morris Resumé",
     imgSrc: Resume,
     anchorText: "Fred's Resumé",
